@@ -93,13 +93,12 @@
         camera.position.z = 25;
         camera.lookAt(new THREE.Vector3(10, 0, 0));
 
-        // add subtle ambient lighting
+        // menambahkan ambient light agar objek mengeluarkan warna
         var ambiColor = "#0c0c0c";
         var ambientLight = new THREE.AmbientLight(ambiColor);
         scene.add(ambientLight);
 
-        // add spotlight for the shadows
-        // add spotlight for the shadows
+        // menambahkan spot light agar ada bayangan
         var spotLight = new THREE.SpotLight(0xffffff);
         spotLight.position.set(-40, 60, -10);
         spotLight.castShadow = true;
@@ -111,7 +110,7 @@
         scene.add(pointLight);
 
 
-        // add a small sphere simulating the pointlight
+        // menambahkan objek kecil sebagai sumber point light
         var sphereLight = new THREE.SphereGeometry(0.1);
         var sphereLightMaterial = new THREE.MeshBasicMaterial({color: 0xac6c25});
         var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
