@@ -93,12 +93,12 @@
         camera.position.z = 25;
         camera.lookAt(new THREE.Vector3(10, 0, 0));
 
-        // add subtle ambient lighting
+        // menambahkan ambient light
         var ambiColor = "#0c0c0c";
         var ambientLight = new THREE.AmbientLight(ambiColor);
         scene.add(ambientLight);
 
-        // add spotlight for the shadows
+        // menambahkan spot light
         var spotLight = new THREE.SpotLight(0xffffff);
         spotLight.position.set(-40, 60, -10);
         spotLight.castShadow = true;
